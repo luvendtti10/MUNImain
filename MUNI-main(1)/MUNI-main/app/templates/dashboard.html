@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro talleres</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+ 
+        <!-----------------------NAVBAR----------------------->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+                    
+            <img src="{{ url_for('static', filename='src/LOGO.png') }}" alt="Logo" style="height: 40px;"> 
+            <a class="navbar-brand" href="#">Centro de actividades adulto mayor</a>
+            <button class="btn btn-outline-primary mx-2" type="button">Evaluar instructor</button>
+            <button class="btn btn-outline-primary mx-2" type="button">Evaluar Taller</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto">
+              </ul>
+              <ul class="navbar-nav mx-auto"> 
+              </ul>
+              <form class="d-flex">
+              
+                <a href="{{ url_for('perfil') }}" class="btn btn-outline-primary">Perfil</a>
+                <a href="{{ url_for('login') }}" class="btn btn-danger">Cerrar Sesión</a>
+            </form>
+            </div>
+          </div>
+        </nav>
+        </header>
+  <!-----------------------TARJETAS----------------------->
+  <div class="container">
+    <!-----------------------TARJETAS 1----------------------->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card mx-2 h-100" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='src/natacion.jpg') }}" class="card-img-top" alt="Natacion" style="object-fit: cover; height: 200px;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Taller de natación</h5>
+                        <p class="card-text"><b>Instructor :</b> Pedro Pedraza</p>
+                        <a href="{{ url_for('vista1') }}" class="btn btn-primary mt-auto mb-2">ver taller</a>
+                        <a href="{{ url_for('inscribir', taller='Natación') }}" class="btn btn-primary ">Inscribirse</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4 mb-3">
+              <div class="card mx-2 h-100" style="width: 18rem;">
+                  <img src="{{ url_for('static', filename='src/images.jpg') }}" class="card-img-top" alt="Tai Chi" style="object-fit: cover; height: 200px;">
+                  <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Taller de Tai Chí</h5>
+                      <p class="card-text"><b>Instructor :</b> Pedro Pedraza</p>
+          
+                      <div class="d-flex flex-column">
+                          <a href="{{ url_for('vista2') }}" class="btn btn-primary mb-2">ver taller</a>
+                          <a href="{{ url_for('inscribir', taller='Tai Chi') }}" class="btn btn-primary btn-spacing">Inscribirse</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <a href="{{ url_for('ver_inscripciones') }}" class="btn btn-success mt-4">Ver Inscripciones</a>
+    </div>
+      <!-----------------------TARJETAS 2----------------------->
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card mx-2 h-100" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='src/actividades-para-adultos-mayores-1.jpeg') }}" class="card-img-top" alt="Musica" style="object-fit: cover; height: 200px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Taller de musica</h5>
+            <p class="card-text"><b>Instructor :</b> Pedro Pedraza <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officiis beatae quia omnis exercitationem.</p>
+            <a href="#" class="btn btn-primary mt-auto">Inscribirse</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4 mb-3">
+        <div class="card mx-2 h-100" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='src/jenga.jpg') }}" class="card-img-top" alt="Jenga" style="object-fit: cover; height: 200px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Taller jenga</h5>
+            <p class="card-text"><b>Instructor :</b> Pedro Pedraza <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officiis beatae quia omnis exercitationem.</p>
+            <a href="#" class="btn btn-primary mt-auto">Inscribirse</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4 mb-3">
+        <div class="card mx-2 h-100" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='src/movilidad-personas-mayores.jpg') }}" class="card-img-top" alt="Movilidad" style="object-fit: cover; height: 200px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Taller de movidad</h5>
+            <p class="card-text"><b>Instructor :</b> Pedro Pedraza <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officiis beatae quia omnis exercitationem.</p>
+            <a href="#" class="btn btn-primary mt-auto">Inscribirse</a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-----------------------TARJETAS 3----------------------->
+    <div class="row">  
+      <div class="col-md-4 mb-3">
+        <div class="card mx-2 h-100" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='src/danza.jpg') }}" class="card-img-top" alt="danza" style="object-fit: cover; height: 200px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Taller de danza</h5>
+            <p class="card-text"><b>Instructor :</b> Pedro Pedraza <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officiis beatae quia omnis exercitationem.</p>
+            <a href="#" class="btn btn-primary mt-auto">Inscribirse</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4 mb-3">
+        <div class="card mx-2 h-100" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='src/deporte.jpg') }}" class="card-img-top" alt="Deporte" style="object-fit: cover; height: 200px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Taller deportivo</h5>
+            <p class="card-text"><b>Instructor :</b> Pedro Pedraza <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officiis beatae quia omnis exercitationem.</p>
+            <a href="#" class="btn btn-primary mt-auto">Inscribirse</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4 mb-3">
+        <div class="card mx-2 h-100" style="width: 18rem;">
+          <img src="{{ url_for('static', filename='src/ajedrez2.webp') }}" class="card-img-top" alt="ajedrez" style="object-fit: cover; height: 200px;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Taller de ajedrez</h5>
+            <p class="card-text"> <b>Instructor :</b> Pedro Pedraza <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officiis beatae quia omnis exercitationem.</p>
+            <a href="#" class="btn btn-primary mt-auto">Inscribirse</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+         <!-----------------------FOOTER----------------------->
+        <footer class="bg-light text-dark py-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>Informacion Municipalidad</h5>
+                <p>Dirección: Av. concha y Toro 1820, Puente Alto, Santiago
+                    Mesa Central: +56228101600 <br>
+                    web: www.mpuentealto.cl</p>
+              </div>
+              <div class="col-md-4">
+                <h5>Enlaces útiles</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="text-decoration-none text-dark">Inicio</a></li>
+                  <li><a href="#" class="text-decoration-none text-dark">Servicios</a></li>
+                  <li><a href="#" class="text-decoration-none text-dark">Contacto</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5>Podria interesarte</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="text-decoration-none text-dark">Corporación Cultural De Puente Alto</a></li>
+                  <li><a href="#" class="text-decoration-none text-dark">Servicios</a>Corporación Del Deporte</li>
+                  <li><a href="#" class="text-decoration-none text-dark">Contacto</a>Datos Abiertos</li>
+                </ul>
+              </div>
+          </div>
+          <div class="text-center mt-3">
+            <p class="mb-0">© 2024 Municipalidad de Puente Alto. Todos los derechos reservados.</p>
+          </div>
+        </footer>
+  
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        
+    
+
+</body>
+</html>
+
+
+
+

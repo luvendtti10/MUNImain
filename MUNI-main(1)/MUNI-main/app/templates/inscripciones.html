@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h3>Inscripciones</h3>
+        <ul class="list-group">
+            {% for inscripcion in inscripciones %}
+            <li class="list-group-item d-flex justify-content-between">
+                {{ inscripcion['nombre'] }} - {{ inscripcion['taller'] }}
+                <form method="POST" action="{{ url_for('eliminar', nombre=inscripcion['nombre']) }}" class="d-inline">
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
+            </li>
+            {% else %}
+            <li class="list-group-item">No hay inscripciones</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary mt-3">Volver al inicio</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

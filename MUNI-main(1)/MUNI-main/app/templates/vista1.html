@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscripcion Taller...</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<!--------------NAVBAR-------------->
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+              
+      <img src="{{ url_for('static', filename='src/LOGO.png') }}" alt="Logo" style="height: 40px;"> 
+      <a class="navbar-brand" href="#">Centro de actividades adulto mayor</a>
+      <button class="btn btn-outline-primary mx-2" type="button">Evaluar instructor</button>
+      <button class="btn btn-outline-primary mx-2" type="button">Evaluar Taller</button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+        </ul>
+        <ul class="navbar-nav mx-auto"> 
+        </ul>
+        <form class="d-flex">
+        
+          <button class="btn btn-outline-secondary mx-2" type="button">Perfil</button>
+          <button class="btn btn-outline-success" type="submit">Cerrar Sesión</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<!--------------TARJETA-------------->
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-8"> 
+          <div class="card custom-card mb-5">
+            <div class="card-image-container">
+              <img src="{{ url_for('static', filename='src/natacion.jpg') }}" class="card-img-top" alt="Natacion.inscripcion">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Taller de Natación</h3>
+              <p class="card-text">
+                <b>Instructor :</b> Pedro Pedraza <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloremque aperiam excepturi dicta cumque, distinctio saepe dolores, sit sapiente quo beatae sint praesentium. 
+                <br> <br> <b>Horario:</b> 10:00-11:30 <br><b>Dias:</b> Martes (por toda la temporada de verano)
+              </p>
+              <p><b>Cupos disponibles:</b> 5</p>
+              <div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 50%"></div>
+              </div>
+              <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-block mt-3">ir a Inscribirse</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary" style="position: absolute; top: 60px; left: 10px;">Volver</a>
+  <!--------------FOOTER-------------->
+  <footer class="bg-light text-dark py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Informacion Municipalidad</h5>
+          <p>Dirección: Av. concha y Toro 1820, Puente Alto, Santiago
+              Mesa Central: +56228101600 <br>
+              web: www.mpuentealto.cl</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Enlaces útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-dark">Inicio</a></li>
+            <li><a href="#" class="text-decoration-none text-dark">Servicios</a></li>
+            <li><a href="#" class="text-decoration-none text-dark">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Podria interesarte</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-dark">Corporación Cultural De Puente Alto</a></li>
+            <li><a href="#" class="text-decoration-none text-dark">Servicios</a>Corporación Del Deporte</li>
+            <li><a href="#" class="text-decoration-none text-dark">Contacto</a>Datos Abiertos</li>
+          </ul>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+      <p class="mb-0">© 2024 Municipalidad de Puente Alto. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
